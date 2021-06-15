@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: none;
+}
+
+p {
+  font-size: 12px;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+}
+
+body {
+  background: #121111;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bar {
+  width: 100%;
+  border-bottom: 1px solid #9A1D4F;
+  padding: 0.3rem;
+  margin: 1rem auto;
+  color: #FFF;
+}
+
+.lista li {
+  min-height: 140px;
+  width: 260px;
+  background: #9A1D4F;
+  float: left;
+  margin: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+.linha {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lista li .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: #800535;
+  margin-bottom: 7px;
+  margin: 0.3rem;
+  float: left;
+  background-size: 100% 100%;
+}
+
+.lista li p {
+  float: left;
+  margin: 0.3rem;
+  width: calc(100% - 80px - 1.2rem);
+  color: #FFF;
+}
+
+.lista li h3 {
+  color: #FFC300;
+  font-size: 25px;
+  float: left;
+}
+
+.lista li h4 {
+  color: #DFFF00;
+  font-size: 30px;
+  float: left;
+  margin-left: 0.5rem;
+}
+
+.lista li h5 {
+  color: #FFF;
+  font-size: 21px;
+  float: right;
+  margin-top: 0.7rem;
+  margin-right: 0.5rem;
+}
+
+.btnMmN {
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #CD309F;
+  overflow: hidden;
+  padding: 0.3rem;
+  float: right;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.btnMmN button,
+input[type="number"] {
+  float: left;
+  height: 100%;
+  width: 30px;
+  background: none;
+  display: block;
+  color: #FFF;
+  padding: 0;
+  font-weight: bold;
+}
+
+.btnMmN input[type="number"] {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 20px;
+}
+
+.btnMmN button:hover,
+input[type="number"]:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+}
+
+@media (max-width: 720px) {
+  .lista {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .lista li {
+    width: 90%;
+    float: none;
+    margin: 0.5rem auto;
+  }
+
+  .lista li p {
+    width: calc(100% - 80px - 1.8rem);
+    margin: 0.6rem;
+  }
+}
