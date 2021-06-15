@@ -10,54 +10,12 @@
 </head>
 
 <body>
+  <button id="btnPedir">Pedir ></button>
   <div class="container">
     <div class="bar">
       <h2>Lanches</h2>
     </div>
-    <ul class="lista">
-      <li>
-        <div class="linha">
-          <div class="img" style="background:url(IMGS/xTudo.jpeg);background-size: cover;"></div>
-          <p>Pão, salsicha, hambúrguer, ovo, alface,
-            bacon, queijo, presunto, tomate,
-            maionese, ketchup, mostarda, molho verde</p>
-        </div>
-        <div class="linha">
-          <div class="container">
-            <h3>X tudo</h3>
-            <h4>R$15,00</h4>
-          </div>
-        </div>
-        <div class="linha">
-          <div class="btnMmN">
-            <button onClick="subtrai(item1)">-</button>
-            <input type="number" value="0" id="item1">
-            <button onClick="soma(item1)">+</button>
-          </div>
-          <h5>Total</h5>
-        </div>
-      </li>
-      <li>
-        <div class="linha">
-          <div class="img" style="background:url(IMGS/xSalada.jpeg);background-size: cover;"></div>
-          <p>Pão, hambúrguer, queijo, alface, tomate,
-            maionese, ketchup, mostarda, molho verde</p>
-        </div>
-        <div class="linha">
-          <div class="container">
-            <h3>X Salada</h3>
-            <h4>R$10,00</h4>
-          </div>
-        </div>
-        <div class="linha">
-          <div class="btnMmN">
-            <button onClick="subtrai(item2)">-</button>
-            <input type="number" value="0" id="item2">
-            <button onClick="soma(item2)">+</button>
-          </div>
-          <h5>Total</h5>
-        </div>
-      </li>
+    <ul id="lanchesLista" class="lista">
     </ul>
   </div>
   <script src="main.js"></script>
