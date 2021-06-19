@@ -1,5 +1,5 @@
 function id(e) { return document.getElementById(e); }
-
+function WhatsAppGo(numero, texto) { if (numero != false) window.open(`https://api.whatsapp.com/send?phone=55${numero}&text=${window.encodeURIComponent(texto)}`); }
 
 class cardapioItem {
   nome;
@@ -23,7 +23,7 @@ let ldp = id("listaDePedidos");
 let ids = 0;
 let itens = [];
 let itensPedidos = [];
-
+let itensPedidosLista = "";
 
 id("btnPedir").addEventListener("click", () => {
   let popSD = pop.style.display;
@@ -36,8 +36,14 @@ id("btnPedir").addEventListener("click", () => {
   }
 });
 
+id("btnPedirAgr").addEventListener("click", () => { WhatsAppGo(numero, itensPedidosLista); });
+
 
 function pedidosAtl() {
+  itensPedidosLista = "";
+  for (let i = 0; i < itensPedidos.length; i++) {
+    itensPedidosLista += `*${itensPedidos[i].quantidade}* - ${itensPedidos[i].nome} | *R$${itensPedidos[i].valor()}*\n`;
+  }
   ldp.innerHTML = "";
   for (let i = 0; i < itensPedidos.length; i++) {
     ldp.insertAdjacentHTML("beforeend", `
@@ -70,17 +76,15 @@ function addPedido(qnt, nome, valor) {
 }
 
 function rmvPedido(iten, nome) {
-  let jaAdd = false;
   let pos;
   for (let i = 0; i < itensPedidos.length; i++) {
     if (itensPedidos[i].nome == nome) {
-      jaAdd = true;
       pos = i;
     }
   }
-  if (jaAdd == false) {
-    itensPedidos.splice(iten, 1);
-  } else if (jaAdd == true) {
+  if (itensPedidos[pos].quantidade == 1) {
+    itensPedidos.splice(iten, iten + 1);
+  } else if (itensPedidos[pos].quantidade > 1) {
     itensPedidos[pos].quantidade--;
   }
   pedidosAtl();
@@ -134,7 +138,3 @@ function addItem(nome, valor, ingredientes, img, categoria) {
   `);
   ids++;
 }
-
-addItem("X Salada", "10.00", "Pão, hambúrguer, queijo, alface, tomate, maionese, ketchup, mostarda, molho verde", "xSalada.jpeg", "lanchesLista");
-addItem("X Salada", "10.00", "Pão, hambúrguer, queijo, alface, tomate, maionese, ketchup, mostarda, molho verde", "xSalada.jpeg", "lanchesLista");
-addItem("X Salada", "10.00", "Pão, hambúrguer, queijo, alface, tomate, maionese, ketchup, mostarda, molho verde", "xSalada.jpeg", "lanchesLista");
