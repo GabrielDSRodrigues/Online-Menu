@@ -154,6 +154,38 @@ input[type="number"]:hover {
   transition: 0.5s;
 }
 
+#pop {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 4px;
+  background: #B20765;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+}
+
+#pop h2,
+p {
+  color: #FFF;
+  margin: 0.5rem 0;
+}
+
+#pop h2 {
+  color: #FFB5DD;
+}
+
+#btnPedirAgr {
+  background: #F857A1;
+  color: #FFF;
+  margin-bottom: 0.5rem;
+  float: right;
+}
+
+#btnPedirAgr:hover {
+  background: #BB1863;
+  transition: 0.5s;
+}
+
 @media (max-width: 720px) {
   .lista {
     width: 100%;
@@ -169,9 +201,5 @@ input[type="number"]:hover {
   .lista li p {
     width: calc(100% - 80px - 1.8rem);
     margin: 0.6rem;
-  }
-  #btnPedir {
-    /*bottom: 10%;
-    top: auto;*/
   }
 }
