@@ -138,3 +138,13 @@ function addItem(nome, valor, ingredientes, img, categoria) {
   `);
   ids++;
 }
+
+function addCategoria(titulo, $id) {
+  id("categorias").insertAdjacentHTML("beforeend", `
+  <div class="bar">
+    <h2>${titulo}</h2>
+  </div>
+  <ul id="${$id}" class="lista">
+  </ul>
+  `);
+}

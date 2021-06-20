@@ -45,6 +45,11 @@ body {
   padding: 0.3rem;
   margin: 1rem auto;
   color: #FFF;
+  display: block;
+}
+
+.lista {
+  overflow: hidden;
 }
 
 .lista li {
