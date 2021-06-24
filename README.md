@@ -1,7 +1,7 @@
 <h1>CardapioOn</h1>
 Cardápio Online interativo
 <center>
-  <img src="previa.jpg" width="400">
+  <img style="margin: auto;" src="previa.jpg" width="400">
 </center>
 <h2>Adicionar Categorias</h2>
 Para adicionar uma categoria você precisa ir em declara.js e executar à seguinte função:

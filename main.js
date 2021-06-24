@@ -24,6 +24,8 @@ let ids = 0;
 let itens = [];
 let itensPedidos = [];
 let itensPedidosLista = "";
+let total = 0;
+let totalLDP = id("total");
 
 id("btnPedir").addEventListener("click", () => {
   let popSD = pop.style.display;
@@ -36,7 +38,7 @@ id("btnPedir").addEventListener("click", () => {
   }
 });
 
-id("btnPedirAgr").addEventListener("click", () => { WhatsAppGo(numero, itensPedidosLista); });
+id("btnPedirAgr").addEventListener("click", () => { WhatsAppGo(numero, itensPedidosLista+"\nTotal *R$"+total+"*"); });
 
 
 function pedidosAtl() {
@@ -90,19 +92,23 @@ function rmvPedido(iten, nome) {
   pedidosAtl();
 }
 
-function soma(e, total, pos, nome, valor) {
+function soma(e, $total, pos, nome, valor) {
   let value = e.value;
+  total += parseFloat(valor);
+  totalLDP.innerText = "Total: R$" + total;
   e.value = parseInt(value) + 1;
   addPedido(parseFloat(e.value), nome, valor);
-  total.innerText = "Total R$" + (parseFloat(itens[pos].valor) * e.value);
+  $total.innerText = "Total R$" + (parseFloat(itens[pos].valor) * e.value);
 }
 
-function subtrai(e, total, pos, nome) {
+function subtrai(e, $total, pos, nome) {
   let value = e.value;
   if (value > 0) {
+    total -= parseFloat(itens[pos].valor);
+    totalLDP.innerText = "Total: R$" + total;
     e.value = parseInt(value) - 1;
     rmvPedido(parseInt(e.value), nome);
-    total.innerText = "Total R$" + (parseFloat(itens[pos].valor) * e.value)
+    $total.innerText = "Total R$" + (parseFloat(itens[pos].valor) * e.value)
   }
 }
 
