@@ -196,6 +196,30 @@ p {
   font-size: 25px;
 }
 
+#pop input[type="text"] {
+  outline: none;
+  padding: 0.3rem;
+  border-radius: 20px;
+  background: #FF6CA2;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+   color: #FFF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFF;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFF;  
+}
+
+:-ms-input-placeholder {  
+   color: #FFF;  
+}
+
 @media (max-width: 720px) {
   .lista {
     width: 100%;

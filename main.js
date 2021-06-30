@@ -38,7 +38,7 @@ id("btnPedir").addEventListener("click", () => {
   }
 });
 
-id("btnPedirAgr").addEventListener("click", () => { WhatsAppGo(numero, itensPedidosLista+"\nTotal *R$"+total+"*"); });
+id("btnPedirAgr").addEventListener("click", () => { WhatsAppGo(numero, itensPedidosLista+"\nTotal *R$"+total+"*\n Endereço: *"+id("end").value+"*"); });
 
 
 function pedidosAtl() {
