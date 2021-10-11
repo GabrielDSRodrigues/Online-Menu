@@ -108,7 +108,7 @@ body {
 }
 
 .btnMmN {
-  width: 80px;
+  width: max-content;
   height: 20px;
   border-radius: 10px;
   border: 1px solid #CD309F;
@@ -120,7 +120,7 @@ body {
 }
 
 .btnMmN button,
-input[type="number"] {
+.btnMmN input[type="text"] {
   float: left;
   height: 100%;
   width: 30px;
@@ -131,15 +131,15 @@ input[type="number"] {
   font-weight: bold;
 }
 
-.btnMmN input[type="number"] {
+.btnMmN input[type="text"] {
   border: none;
   outline: none;
   text-align: center;
-  width: 20px;
+  min-width: 20px;
 }
 
 .btnMmN button:hover,
-input[type="number"]:hover {
+.btnMmN input[type="text"]:hover {
   background: rgba(255, 255, 255, 0.1);
   transition: 0.5s;
 }
@@ -204,6 +204,7 @@ p {
   margin-right: 1rem;
   margin-bottom: 1rem;
   border: none;
+  width: max-content;
 }
 
 ::-webkit-input-placeholder {

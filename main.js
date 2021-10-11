@@ -133,9 +133,10 @@ function addItem(nome, valor, ingredientes, img, categoria) {
       </div>
     </div>
     <div class="linha">
+
       <div class="btnMmN">
         <button onClick="subtrai(item${ids}, total${ids}, ${ids}, '${nome}')">-</button>
-        <input type="number" value="0" id="item${ids}">
+        <input disabled type="text" value="0" id="item${ids}">
         <button onClick="soma(item${ids}, total${ids}, ${ids}, '${nome}', '${valor}')">+</button>
       </div>
       <h5 id="total${ids}">Total R$0</h5>
