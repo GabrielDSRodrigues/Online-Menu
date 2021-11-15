@@ -4,29 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="cache-control" content="no-cache">
-  <link rel="icon" href="icon.jpg">
+  <link rel="icon" href="imgs/icon.jpg">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CardápioOn</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Online Menu</title>
+  <meta name="description" content="Um cardápio online para seu negócio">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <button id="btnPedir">Pedir ></button>
-  <div id="pop">
-    <div class="container">
-      <h2>Pedido</h2>
-      <ul id="listaDePedidos">
-      </ul>
-      <h3 id="total"></h3>
-      <input id="end" type="text" placeholder="Endereço">
-      <button id="btnPedirAgr">Pedir agora!</button>
+  <div class="container">
+    <div class="ml-auto w-max m-100">
+      <div class="w-max">
+        <button id="btn-finish">Fazer Pedido</button>
+        <div id="list" class="float-r">
+          <p class="list-title"><b>Pedidos</b></p>
+          <h3 class="list-subtitle">Lista</h3>
+          <ul id="list-items"></ul>
+          <h3 class="list-subtitle">Total</h3>
+          <p id="list-total"><b>R$0</b></p>
+          <br>
+          <div id="address-group">
+            <label for="address">endereço</label>
+            <input type="text" id="address">
+            <button id="list-btn">pedir</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="group" id="categories"></div>
   </div>
-  <div id="categorias" class="container">
-  </div>
-  <script src="main.js"></script>
-  <script src="declara.js"></script>
+  <script type="module" src="js/def.js"></script>
 </body>
 
 </html>
