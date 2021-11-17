@@ -88,6 +88,10 @@ label {
   overflow-y: scroll;
 }
 
+.group-item-desc::-webkit-scrollbar {
+  display: none;
+}
+
 .group-item-price {
   background: #FFF;
   margin: 0.6rem 0;
