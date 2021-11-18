@@ -23,17 +23,9 @@ label {
   margin-left: auto;
 }
 
-.w-max {
-  width: max-content;
-}
-
-.float-r {
-  float: right;
-}
-
 .container {
   margin: 0 auto;
-  height: 100%;
+  overflow: hidden;
   max-width: 1024px;
 }
 
@@ -86,6 +78,7 @@ label {
   max-height: 100px;
   height: 40px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .group-item-desc::-webkit-scrollbar {
@@ -156,6 +149,13 @@ label {
   display: none;
   margin-top: 1rem;
   margin-right: 1rem;
+}
+
+.list-container {
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: min-content;
 }
 
 .list-title {
@@ -246,10 +246,6 @@ label {
     margin: 8px 0;
   }
 
-  .m-100 {
-    width: 100%;
-  }
-
   #list {
     position: fixed;
     margin: unset;
@@ -268,6 +264,10 @@ label {
 }
 
 @media(min-width: 1025px) {
+  .group-category {
+    margin-left: 10rem;
+  }
+
   #btn-finish {
     border-radius: 0 0 10px 10px;
   }

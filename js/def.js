@@ -1,5 +1,6 @@
 import { categories, items, waAPI } from "./main.js";
 
+waAPI.countryCode = 55; // COUNTRY CODE
 waAPI.number = false;
 
 
