@@ -1,4 +1,5 @@
-import { id } from "../methods/dom.js";
+import { id, insert } from "../methods/dom.js";
+import { list } from "./list.js";
 
 export class item {
   constructor(name, desc, price, img, $id) {
@@ -30,6 +31,30 @@ export class item {
       obj.total = ((--obj.un) * parseFloat(obj.price));
       this.update(obj);
     }
+  }
+
+  static id = 0;
+  static data = [];
+  static add(name, desc, price, img, category) {
+
+    let $new = new item(name, desc, price, img, this.id, category);
+
+    this.data.push($new);
+
+    insert($new.element, id(category));
+
+    id($new.btn_subtract).addEventListener("click", () => {
+      item.subtract(this.data[$new.id]);
+      list.def();
+    });
+
+    id($new.btn_sum).addEventListener("click", () => {
+      item.sum(this.data[$new.id]);
+      list.def();
+    });
+
+    this.id++;
+
   }
 
   get element() {
