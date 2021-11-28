@@ -1,8 +1,8 @@
 import { category, item, waAPI } from "./main.js";
 
 waAPI.countryCode = 55; // COUNTRY CODE
-waAPI.number = false;
-
+waAPI.number = false; // PHONE NUMBER
+item.currency = "R$"; // CURRENCY
 
 category.add("Lanches", "lanches");
 item.add("X-Salada", "lorem ipsum dolor sit amet arcu.", "10,00", "xSalada.jpeg", "lanches");

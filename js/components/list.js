@@ -26,16 +26,16 @@ export class list {
         let $new = new list($item.name, $item.un, $item.total);
         this.$total += $item.total;
         insert($new.element, this.$list);
-        this.$content += `*${$item.un}* - ${$item.name} | *R$${$item.total}*\n`;
+        this.$content += `*${$item.un}* - ${$item.name} | *${item.currency}${$item.total}*\n`;
       }
     }
 
-    this.$content += `\nTotal: *R$${this.$total}*\nEndereço: *${this.$address.value}*`;
-    this.$totalDisplay.innerText = `R$${this.$total}`;
+    this.$content += `\nTotal: *${item.currency}${this.$total}*\nEndereço: *${this.$address.value}*`;
+    this.$totalDisplay.innerText = `${item.currency}${this.$total}`;
 
   }
 
   get element() {
-    return `<li class="list-item">${this.un} - ${this.name} = R$${this.total}</li>`;
+    return `<li class="list-item">${this.un} - ${this.name} = ${item.currency}${this.total}</li>`;
   }
 }

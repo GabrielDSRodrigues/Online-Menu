@@ -17,7 +17,7 @@ export class item {
   }
 
   static update(obj) {
-    id(obj.totalDisplay).innerText = "R$" + obj.total;
+    id(obj.totalDisplay).innerText = item.currency + obj.total;
     id(obj.unDisplay).innerText = obj.un;
   }
 
@@ -34,6 +34,7 @@ export class item {
   }
 
   static id = 0;
+  static currency = "R$";
   static data = [];
   static add(name, desc, price, img, category) {
 
@@ -64,7 +65,7 @@ export class item {
         <h2 class="group-item-name">${this.name}</h2>
         <p class="group-item-desc">${this.desc}</p>
         <div class="group-item-price">R$${this.price}</div>
-        <h3 class="group-item-total" id="${this.totalDisplay}">R$${this.total}</h3>
+        <h3 class="group-item-total" id="${this.totalDisplay}">${item.currency}${this.total}</h3>
         <div class="ctrl-item-total">
           <button id="${this.btn_subtract}">-</button>
           <div id="${this.unDisplay}">${this.un}</div>
