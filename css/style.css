@@ -265,7 +265,7 @@ label {
 
 @media(min-width: 1025px) {
   .group-category {
-    //margin-left: 10rem;
+    /*margin-left: 10rem;*/
   }
 
   #btn-finish {
