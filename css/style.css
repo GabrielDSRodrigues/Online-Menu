@@ -43,8 +43,10 @@ label {
   margin: 1.5rem 2.2rem;
   font-size: 50px;
   text-align: left;
-  border-bottom: 3px solid #FFF;
+  border-bottom: 2px solid #FFF;
   width: max-content;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 200;
 }
 
 .group-item {

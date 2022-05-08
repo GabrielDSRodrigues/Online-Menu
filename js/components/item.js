@@ -1,5 +1,6 @@
 import { id, insert } from "../methods/dom.js";
 import { list } from "./list.js";
+import { currency } from "../methods/style.js";
 
 export class item {
   constructor(name, desc, price, img, $id) {
@@ -17,7 +18,7 @@ export class item {
   }
 
   static update(obj) {
-    id(obj.totalDisplay).innerText = item.currency + obj.total;
+    id(obj.totalDisplay).innerText = currency(obj.total);
     id(obj.unDisplay).innerText = obj.un;
   }
 
@@ -34,7 +35,7 @@ export class item {
   }
 
   static id = 0;
-  static currency = "R$";
+  static currency = "pt-br";
   static data = [];
   static add(name, desc, price, img, category) {
 
@@ -64,8 +65,8 @@ export class item {
         <img class="group-item-img" src="imgs/thumbnails/${this.img}">
         <h2 class="group-item-name">${this.name}</h2>
         <p class="group-item-desc">${this.desc}</p>
-        <div class="group-item-price">R$${this.price}</div>
-        <h3 class="group-item-total" id="${this.totalDisplay}">${item.currency}${this.total}</h3>
+        <div class="group-item-price">${currency(this.price)}</div>
+        <h3 class="group-item-total" id="${this.totalDisplay}">${currency(this.total)}</h3>
         <div class="ctrl-item-total">
           <button id="${this.btn_subtract}">-</button>
           <div id="${this.unDisplay}">${this.un}</div>

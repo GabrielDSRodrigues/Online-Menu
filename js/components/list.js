@@ -1,5 +1,6 @@
 import { id, insert } from "../methods/dom.js";
 import { item } from "./item.js";
+import { currency } from "../methods/style.js";
 
 export class list {
   constructor(name, un, total) {
@@ -26,16 +27,16 @@ export class list {
         let $new = new list($item.name, $item.un, $item.total);
         this.$total += $item.total;
         insert($new.element, this.$list);
-        this.$content += `*${$item.un}* - ${$item.name} | *${item.currency}${$item.total}*\n`;
+        this.$content += `*${$item.un}* - ${$item.name} | *${currency($item.total)}*\n`;
       }
     }
 
-    this.$content += `\nTotal: *${item.currency}${this.$total}*\nEndereço: *${this.$address.value}*`;
-    this.$totalDisplay.innerText = `${item.currency}${this.$total}`;
+    this.$content += `\nTotal: *${currency(this.$total)}*\nEndereço: *${this.$address.value}*`;
+    this.$totalDisplay.innerText = `${currency(this.$total)}`;
 
   }
 
   get element() {
-    return `<li class="list-item">${this.un} - ${this.name} = ${item.currency}${this.total}</li>`;
+    return `<li class="list-item">${this.un} - ${this.name} = ${currency(this.total)}</li>`;
   }
 }
