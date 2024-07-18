@@ -1,6 +1,6 @@
-import { id, insert } from "../methods/dom.js";
+import { id, insert } from "./dom.js";
 import { item } from "./item.js";
-import { currency } from "../methods/style.js";
+import { currency } from "./style.js";
 
 export class list {
   constructor(name, un, total) {

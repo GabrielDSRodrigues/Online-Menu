@@ -1,4 +1,4 @@
-import { item } from "../components/item.js"
+import { item } from "./item.js"
 
 export function block(e) {
   e.style.display = "block";

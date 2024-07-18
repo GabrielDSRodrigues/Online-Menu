@@ -1,4 +1,4 @@
-import { insert, id } from "../methods/dom.js"
+import { insert, id } from "./dom.js"
 
 export class category {
   constructor(title, id) {

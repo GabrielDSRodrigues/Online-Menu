@@ -1,6 +1,6 @@
-import { id, insert } from "../methods/dom.js";
+import { id, insert } from "./dom.js";
 import { list } from "./list.js";
-import { currency } from "../methods/style.js";
+import { currency } from "./style.js";
 
 export class item {
   constructor(name, desc, price, img, $id) {
@@ -62,7 +62,7 @@ export class item {
   get element() {
     return `
       <div class="group-item">
-        <img class="group-item-img" src="imgs/thumbnails/${this.img}">
+        <img class="group-item-img" src="${this.img}">
         <h2 class="group-item-name">${this.name}</h2>
         <p class="group-item-desc">${this.desc}</p>
         <div class="group-item-price">${currency(this.price)}</div>
